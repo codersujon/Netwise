@@ -5,7 +5,7 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   base: '/Netwise/',
-   build: {
+  build: {
     outDir: 'docs', // send build output docs ফোল্ডারে যাবে
   },
 })
