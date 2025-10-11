@@ -8,13 +8,11 @@
 
 A professional and responsive **React-based IT Solutions & Technology Template**, built with **Bootstrap 5**, **SASS**, and **Vite** for ultra-fast performance and modular scalability.
 
-___
 
 ## 🌐 Live Preview
 
 🔗 **Demo:** [https://codersujon.github.io/Netwise/](https://codersujon.github.io/Netwise/)
 
-___
 
 ## ✨ Features
 
@@ -28,7 +26,6 @@ ___
 - 🔥 SEO-friendly and performance optimized
 - 🧰 Easy to deploy on Netlify / GitHub Pages
 
-___
 
 ## 🧰 Technologies Used
 
@@ -41,7 +38,6 @@ ___
 | 💫 **AOS / WOW.js** | Scroll animations |
 | 🧩 **React Router DOM** | Page navigation |
 
-___
 
 ## ⚙️ Installation & Setup
 
