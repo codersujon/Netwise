@@ -11,7 +11,7 @@ A professional and responsive **React-based IT Solutions & Technology Template**
 
 ## 🌐 Live Preview
 
-🔗 **Demo:** [https://codersujon.github.io/Netwise/](https://codersujon.github.io/Netwise/)
+🔗 **Demo:** [Preview](https://codersujon.github.io/Netwise/)
 
 
 ## ✨ Features
