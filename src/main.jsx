@@ -5,8 +5,11 @@ import App from './App.jsx'
 /**
  * CSS IMPORT
  */
-import 'bootstrap/dist/css/bootstrap.min.css'
-import './sass/style.scss'
+import './assets/fontawsome/css/fontawesome.css' //Fontawesome
+import 'bootstrap/dist/css/bootstrap.min.css' //Bootstrap
+import './sass/style.scss'  //style
+
+
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>

@@ -1,10 +1,13 @@
 import React from 'react'
+import Header from '../components/Header'
+import Banner from '../components/Banner'
 
 function Home() {
   return (
-    <div>
-        <h1 className='display-4 text-center'>Home</h1>
-    </div>
+    <>
+      <Header />
+      <Banner />
+    </>
   )
 }
 
