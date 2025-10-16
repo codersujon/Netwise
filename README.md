@@ -37,7 +37,6 @@ A professional and responsive **React-based IT Solutions & Technology Template**
 | ⚡ **Vite** | Modern development environment |
 | 💫 **AOS / WOW.js** | Scroll animations |
 | 🧩 **React Router DOM** | Page navigation |
-| 🧩 **yet-another-react-lightbox** | Video Popup |
 
 
 ## ⚙️ Installation & Setup
