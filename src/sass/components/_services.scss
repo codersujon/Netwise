@@ -7,6 +7,7 @@
 	background-size: cover;
 	background-position: center;
 	background-color: var(--bs-white-color);
+	background-image: url('../../assets/img//services/service-bg.png');
 
 	.section-title-block {
 		.section-title {
@@ -15,9 +16,6 @@
 	}
 
 	.arrow {
-		position: absolute;
-		top: -123px;
-		left: calc(100% - 75px);
 		width: 60px;
 		height: 60px;
 		display: flex;
