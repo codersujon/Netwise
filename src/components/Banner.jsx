@@ -1,9 +1,12 @@
-import React from 'react'
+import React, {useState} from 'react'
 import BannerImage from '../assets/img/banner/banner-img-1.png'
 import Bannner_Shape1 from '../assets/img/shape/banner-shape-1.svg'
 import Bannner_Shape2 from '../assets/img/shape/banner-shape-2.png'
 
 const Banner = () => {
+
+    const [videoActive, setVideoActive] = useState(false);
+
   return (
     <section className="ep-banner-section position-relative overflow-hidden custom-wrapper-hover">
         <div className="banner-shape position-absolute top-50 translate-middle-y z-0">
@@ -33,12 +36,12 @@ const Banner = () => {
                             </svg>
                         </span>
                         </a>
-                        <a href="https://www.youtube.com/watch?v=PkkV1vLHUvQ"
-                        className="vidplay play-now-btn d-inline-flex align-items-center">
-                        <span className="icon d-flex align-items-center justify-content-center rounded-pill"><i
-                            className="fas fa-play"></i></span>
-                        <span className="text">Play Now</span>
-                        </a>
+                        <button onClick={() => setVideoActive(true)} href="https://www.youtube.com/watch?v=PkkV1vLHUvQ"
+                        className="vidplay border-0 bg-transparent play-now-btn d-inline-flex align-items-center">
+                            <span className="icon d-flex align-items-center justify-content-center rounded-pill"><i
+                                className="fas fa-play"></i></span>
+                            <span className="text">Play Now</span>
+                        </button>
                     </div>
                     </div>
                 </div>
@@ -50,6 +53,21 @@ const Banner = () => {
             </div>
         </div>
         <span className="custom-shadown position-absolute rounded-pill"></span>
+
+        {/* iframe popup */}
+        <div className={(videoActive ? " video-zoom-in" : " ") + " video-backdrop"} onClick={() => setVideoActive(false)}>
+            <div className="video-inner">
+                <div className="video-container" onClick={(e) => e.stopPropagation()}>
+                    {videoActive &&
+                        <iframe className='video' src="https://www.youtube.com/embed/i2CqOZNnFkA" title="তিতির পাখির ৩টি উপদেশ শুনে ধনী হতে পারেন! Professor Mokhter Ahmad" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    }
+                    <button aria-label="close video popup" className="close-video-popup" onClick={() => setVideoActive(false)}>
+                        <i className="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
     </section>
   )
 }
