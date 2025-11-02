@@ -7,6 +7,7 @@ import App from './App.jsx'
  */
 import './assets/fontawsome/css/fontawesome.css' //Fontawesome
 import 'bootstrap/dist/css/bootstrap.min.css' //Bootstrap
+import 'swiper/css'; //Swiper Slider
 import './sass/style.scss'  //style
 
 
