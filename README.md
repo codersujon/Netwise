@@ -38,6 +38,8 @@ A professional and responsive **React-based IT Solutions & Technology Template**
 | 💫 **AOS / WOW.js** | Scroll animations |
 | 🧩 **React Router DOM** | Page navigation |
 | 🌀 **Swiper JS** | Modern, touch-friendly slider & carousel |
+| 🧮 Odometer | Smooth, odometer-style number transitions for counters & stats |
+| 👁️ React Intersection Observer | Detect element visibility for scroll animations, lazy loading & triggers |
 
 
 ## ⚙️ Installation & Setup
