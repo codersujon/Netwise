@@ -6,6 +6,7 @@ import Services from '../components/Services'
 import Counter from '../components/Counter'
 import Team from '../components/Team'
 import Messages from '../components/Messages'
+import CallToAction from '../components/Call_to_Action'
 
 function Home() {
   return (
@@ -17,6 +18,7 @@ function Home() {
       <Counter />
       <Team />
       <Messages />
+      <CallToAction />
     </>
   )
 }
