@@ -1,8 +1,64 @@
-import React from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import SectionTitle from './SectionTitle'
 import { teamsData } from '../data/team'
+import { gsap } from "gsap";
+
 
 const Team = () => {
+
+    const [activeTeam, setActiveTeam] = useState(
+        teamsData.find((team) => team.isActive) ? teamsData.find((team) => team.isActive).name : teamsData[0].name
+    );
+
+    const teamItemsRef = useRef([]);
+    const hoverImagesRef = useRef([]);
+
+    useEffect(() => {
+        // Function to move the service image on mouse move
+        const ServiceImageMove = (event, item) => {
+        const contentBox = item.getBoundingClientRect();
+        const dx = (event.clientX - contentBox.x - contentBox.width / 1) / 3;
+        const dy = (event.clientY - contentBox.y - contentBox.height / 1) / 10;
+
+        hoverImagesRef.current.forEach((img) => {
+            gsap.to(img, {
+            x: dx,
+            y: dy,
+            });
+        });
+        };
+
+        // Add hover effect only for screens larger than 768px
+        if (window.innerWidth > 767) {
+        teamItemsRef.current.forEach((item, i) => {
+            item.addEventListener("mousemove", (event) => {
+            ServiceImageMove(event, item);
+            });
+
+            item.addEventListener("mouseleave", () => {
+            hoverImagesRef.current.forEach((img) => {
+                gsap.to(img, {
+                x: 0,
+                y: 0
+                });
+            });
+            });
+        });
+
+        // Add active team class on hover
+        teamItemsRef.current.forEach((item) => {
+            item.addEventListener('mouseenter', () => {
+            teamItemsRef.current.forEach((el) => el.classList.remove('active-team'));
+            item.classList.add('active-team');
+            });
+        });
+        }
+    }, []);
+
+    const handleMouseEnter = (teamName) => {
+        setActiveTeam(teamName);
+    };
+
     return (
         <>
             <section className="ep-team-section py-120">
@@ -17,7 +73,10 @@ const Team = () => {
 
                         {
                             teamsData.map((team) =>(
-                                <div className="team-item rounded-20 position-relative" key={team.id}>
+                                <div  key={team.id} className={`team-item rounded-20 position-relative ${activeTeam === team.name ? "active-team" : ""}`}
+              ref={(el) => (teamItemsRef.current[team.id] = el)}
+              onMouseEnter={() => handleMouseEnter(team.name)}
+>
                                     <div className="row g-4">
                                         <div className="col-lg-4 col-md-6 align-self-center">
                                             <div className="team-name-info">
@@ -52,7 +111,7 @@ const Team = () => {
                                             </div>
                                         </div>
                                         <div className="col-lg-4 col-md-1 align-self-center">
-                                            <div className="hover-image position-absolute overflow-hidden rounded-20">
+                                            <div ref={(el) => (hoverImagesRef.current[team.id] = el)} className="hover-image position-absolute overflow-hidden rounded-20">
                                                 <div className="team-image">
                                                     <img src={team.image} alt={team.name} className="img-fluid w-100" />
                                                 </div>
@@ -71,7 +130,7 @@ const Team = () => {
                             Contact Us
                             <span className="arrow">
                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <g clip-path="url(#clip0_4443_62)">
+                                    <g clipPath="url(#clip0_4443_62)">
                                         <path
                                             d="M13.4317 12.5381C13.4967 12.4215 13.535 12.2898 13.5367 12.1506L13.5733 7.95396C13.5758 7.60896 13.2992 7.32646 12.9483 7.32312C12.6058 7.32312 12.3258 7.59896 12.3233 7.94229L12.2975 10.8665L7.48917 6.05813C7.245 5.81396 6.84917 5.81396 6.605 6.05813C6.36083 6.30229 6.36083 6.69812 6.605 6.94229L11.4158 11.7531L8.59083 11.7831C8.245 11.7873 7.96833 12.0698 7.9725 12.4148C7.97583 12.7581 8.255 13.0331 8.60417 13.0331C8.60417 13.0331 12.6783 12.989 12.685 12.989C12.9967 12.9856 13.2842 12.8023 13.4325 12.539L13.4317 12.5381Z"
                                             fill="white" />

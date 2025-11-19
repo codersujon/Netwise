@@ -39,8 +39,8 @@ const Services = () => {
             speed={1000}
             modules={[Autoplay, Navigation]}
             navigation={{ prevEl:".arrow-prev",  nextEl:".arrow-next"}}
-            onSlideChange={() => console.log('slide change')}
-            onSwiper={(swiper) => console.log(swiper)}
+            // onSlideChange={() => console.log('slide change')}
+            // onSwiper={(swiper) => console.log(swiper)}
         >
                 {
                     servicesData.map((service)=>(

@@ -40,7 +40,7 @@ A professional and responsive **React-based IT Solutions & Technology Template**
 | 🌀 **Swiper JS** | Modern, touch-friendly slider & carousel |
 | 🧮 Odometer | Smooth, odometer-style number transitions for counters & stats |
 | 👁️ React Intersection Observer | Detect element visibility for scroll animations, lazy loading & triggers |
-
+| 🎬 **GSAP** | High-performance animations with scroll & timeline features |
 
 ## ⚙️ Installation & Setup
 
