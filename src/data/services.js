@@ -1,3 +1,6 @@
+/**************************
+ * Service Images
+ **************************/
 import serviceIcon1 from "../assets/img/icons/service-icon-1.svg";
 import serviceIcon2 from "../assets/img/icons/service-icon-2.svg";
 import serviceIcon3 from "../assets/img/icons/service-icon-3.svg";

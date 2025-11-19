@@ -4,6 +4,7 @@ import Banner from '../components/Banner'
 import Features from '../components/Features'
 import Services from '../components/Services'
 import Counter from '../components/Counter'
+import Team from '../components/Team'
 
 function Home() {
   return (
@@ -13,6 +14,7 @@ function Home() {
       <Features />
       <Services />
       <Counter />
+      <Team />
     </>
   )
 }
