@@ -4,6 +4,7 @@
 // Message section one
 .ep-messages-section {
 	padding-bottom: 92px;
+	z-index: 99;
 
 	&::before {
 		width: 1600px;
@@ -13,6 +14,7 @@
 		top: 0;
 		left: 0;
 		content: "";
+		z-index: -1;
 	}
 
 	.message-image {
@@ -26,7 +28,7 @@
 			border-top-left-radius: 20px;
 			object-fit: cover;
 			object-position: center;
-			height: 100%;
+			height: 85%;
 		}
 	}
 }

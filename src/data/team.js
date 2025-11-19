@@ -17,6 +17,7 @@ export const teamsData = [
         name: "Floyd Miles",
         description: "Lorem ipsum dolor sit",
         image: team_img2,
+        isActive: true
     },
     {
         id: 3,
