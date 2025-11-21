@@ -8,6 +8,7 @@ import Team from '../components/Team'
 import Messages from '../components/Messages'
 import CallToAction from '../components/Call_to_Action'
 import Testimonial from '../components/Testimonial'
+import Project from '../components/Project'
 
 function Home() {
   return (
@@ -21,6 +22,7 @@ function Home() {
       <Messages />
       <CallToAction />
       <Testimonial />
+      <Project />
     </>
   )
 }
