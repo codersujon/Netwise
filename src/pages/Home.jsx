@@ -7,6 +7,7 @@ import Counter from '../components/Counter'
 import Team from '../components/Team'
 import Messages from '../components/Messages'
 import CallToAction from '../components/Call_to_Action'
+import Testimonial from '../components/Testimonial'
 
 function Home() {
   return (
@@ -19,6 +20,7 @@ function Home() {
       <Team />
       <Messages />
       <CallToAction />
+      <Testimonial />
     </>
   )
 }
