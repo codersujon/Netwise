@@ -26,7 +26,7 @@ const Project = () => {
 
                             {
                                 leftColumns.map((project)=>(
-                                    <div className="project-item position-relative">
+                                    <div key={project.id} className="project-item position-relative">
                                         <div className="img reveal zoom-out overflow-hidden rounded-20">
                                             <a href="project-details.html" className="d-block w-100">
                                                 <img src={project.image} alt="project-img"
@@ -52,7 +52,7 @@ const Project = () => {
 
                             {
                                 rightColumns.map((project)=>(
-                                    <div className="project-item position-relative">
+                                    <div key={project.id} className="project-item position-relative">
                                         <div className="img reveal zoom-out overflow-hidden rounded-20">
                                             <a href="project-details.html" className="d-block w-100">
                                                 <img src={project.image} alt="project-img"

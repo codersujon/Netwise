@@ -9,7 +9,7 @@ return (
             <div className="slider-item d-flex align-items-center">
                 {
                     textSliders.map((slideItem)=>(
-                            <h2 className="title">
+                            <h2 key={slideItem.id} className="title">
                                 <img src={slideItem.icon} alt="globe-icon"/>
                                 {slideItem.title}
                             </h2>
@@ -19,7 +19,7 @@ return (
             <div className="slider-item d-flex align-items-center">
                 {
                     textSliders.map((slideItem)=>(
-                            <h2 className="title">
+                            <h2 key={slideItem.id} className="title">
                                 <img src={slideItem.icon} alt="globe-icon"/>
                                 {slideItem.title}
                             </h2>
