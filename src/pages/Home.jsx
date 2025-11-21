@@ -9,6 +9,7 @@ import Messages from '../components/Messages'
 import CallToAction from '../components/Call_to_Action'
 import Testimonial from '../components/Testimonial'
 import Project from '../components/Project'
+import TextSlider from '../components/TextSlider'
 
 function Home() {
   return (
@@ -23,6 +24,7 @@ function Home() {
       <CallToAction />
       <Testimonial />
       <Project />
+      <TextSlider />
     </>
   )
 }
